@@ -40,8 +40,8 @@ jQuery.entwine("quickaddnew", function($) {
 
 			// clean url and append custom route
 			var formUrl = this.parents('form').attr('action');
-			var cleanURL = formUrl.substr(0,formUrl.indexOf('?'));
-			var params = formUrl.substr(formUrl.indexOf('?'));
+			var cleanURL = formUrl;
+			var params = '';
 			var dialogHTMLURL = cleanURL + '/field/' + fieldName + '/AddNewFormHTML' + params;
 
 			this.setURL(dialogHTMLURL.replace(/[\[\]']+/g,''));
